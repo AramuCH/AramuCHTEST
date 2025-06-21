@@ -49,13 +49,14 @@ a:hover {
     padding: 12px 25px;
     border-radius: var(--border-radius);
     text-align: center;
-    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
     margin-top: 20px;
 }
 
 .btn-primary:hover {
     background-color: #8FD0F7;
     transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバーで影を濃く */
 }
 
 /* セカンダリボタン */
@@ -75,6 +76,7 @@ a:hover {
     background-color: var(--primary-color);
     color: var(--white);
     transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバーで影を濃く */
 }
 
 
@@ -128,12 +130,14 @@ a:hover {
     width: 0;
     height: 2px;
     background: var(--primary-color);
-    left: 0;
+    left: 50%; /* 中央から広がるように */
     bottom: -5px;
+    transform: translateX(-50%); /* 中央寄せ */
     transition: width var(--transition-speed);
 }
 
-.main-nav ul li a:hover::after {
+.main-nav ul li a:hover::after,
+.main-nav ul li a.active-nav-link::after {
     width: 100%;
 }
 
@@ -143,10 +147,6 @@ a:hover {
     font-weight: bold;
 }
 
-.main-nav ul li a.active-nav-link::after {
-    width: 100%; /* アクティブなリンクは常にアンダーラインを表示 */
-    background: var(--primary-color);
-}
 
 /* ヒーローセクション */
 .hero-section {
@@ -174,6 +174,12 @@ a:hover {
     border: 4px solid var(--white);
     box-shadow: 0 0 0 4px var(--primary-color);
     margin-bottom: 20px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
+}
+
+.profile-icon:hover {
+    transform: scale(1.03); /* 少し拡大 */
+    box-shadow: 0 0 0 4px var(--primary-color), 0 6px 12px rgba(0, 0, 0, 0.15); /* 影も追加 */
 }
 
 .hero-section h2 {
@@ -227,6 +233,12 @@ a:hover {
     border: 3px solid var(--primary-color);
     box-shadow: 0 0 0 3px var(--white);
     flex-shrink: 0;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
+}
+
+.about-brief-image:hover {
+    transform: scale(1.03); /* 少し拡大 */
+    box-shadow: 0 0 0 3px var(--white), 0 6px 12px rgba(0, 0, 0, 0.15); /* 影も追加 */
 }
 
 .about-brief-text {
@@ -258,6 +270,12 @@ a:hover {
     border: 5px solid var(--primary-color);
     box-shadow: var(--box-shadow);
     margin-bottom: 20px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
+}
+
+.about-image-large:hover {
+    transform: scale(1.03); /* 少し拡大 */
+    box-shadow: 0 0 0 5px var(--primary-color), 0 6px 12px rgba(0, 0, 0, 0.15); /* 影も追加 */
 }
 
 .about-image-wrapper h3 {
@@ -324,7 +342,7 @@ a:hover {
 }
 
 .sns-icon-link:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px) scale(1.1); /* 少し上に浮き上がり、拡大 */
 }
 
 .sns-icon-link.twitter { background-color: #1DA1F2; } /* X (Twitter) */
@@ -345,6 +363,12 @@ a:hover {
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     font-size: 1.1em;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
+}
+
+.schedule-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .schedule-note {
@@ -367,6 +391,12 @@ a:hover {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     text-align: center;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
+}
+
+.media-item:hover {
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバーで影を濃く */
 }
 
 .video-container {
@@ -429,11 +459,12 @@ a:hover {
     box-shadow: var(--box-shadow);
     padding: 30px;
     text-align: center;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
 }
 
 .more-section-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバーで影を濃く */
 }
 
 .more-section-item h3 {
@@ -462,11 +493,12 @@ a:hover {
     box-shadow: var(--box-shadow);
     padding: 25px;
     text-align: center;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
 }
 
 .goods-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバーで影を濃く */
 }
 
 .goods-image {
@@ -475,6 +507,12 @@ a:hover {
     object-fit: cover; /* 画像がはみ出さないように */
     border-radius: var(--border-radius);
     margin-bottom: 20px;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
+}
+
+.goods-image:hover {
+    transform: scale(1.03); /* 少し拡大 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 影も追加 */
 }
 
 .goods-item h3 {
@@ -515,6 +553,12 @@ a:hover {
     flex: 1; /* 均等な幅 */
     min-width: 300px; /* 最小幅 */
     text-align: center;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* ホバーアニメーション */
+}
+
+.fanletter-section-item:hover {
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* ホバーで影を濃く */
 }
 
 .fanletter-section-item h3 {
@@ -579,14 +623,57 @@ a:hover {
     font-size: 1em;
     width: 100%;
     box-sizing: border-box; /* パディングを含めて幅を計算 */
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out; /* フォーカスアニメーション */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color); /* フォーカス時に枠線を強調 */
+    box-shadow: 0 0 0 3px rgba(167, 217, 255, 0.5); /* パステルブルーの光 */
+    outline: none; /* デフォルトのアウトラインを削除 */
 }
 
 .contact-form textarea {
     resize: vertical; /* 縦方向のみリサイズ可能 */
 }
 
-.contact-form button {
-    cursor: pointer;
+
+/* プライバシーポリシーページ関連 (privacy.html用) */
+.privacy-content h3 {
+    text-align: left; /* 左寄せ */
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 40px; /* 各セクション間の間隔 */
+    margin-bottom: 20px;
+}
+
+.privacy-content h3:first-of-type {
+    margin-top: 0; /* ページ先頭のH3は上マージンなし */
+}
+
+.privacy-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.privacy-content ul {
+    list-style: disc; /* 黒丸リスト */
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.privacy-content ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.last-updated {
+    text-align: right;
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-top: 50px;
 }
 
 
@@ -657,41 +744,9 @@ a:hover {
     .goods-image {
         height: 150px; /* スマホでの画像高さを調整 */
     }
-}
 
-/* --- プライバシーポリシーページ関連 (privacy.html用) --- */
-.privacy-content h3 {
-    text-align: left; /* 左寄せ */
-    font-size: 1.6em;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 5px;
-    margin-top: 40px; /* 各セクション間の間隔 */
-    margin-bottom: 20px;
-}
-
-.privacy-content h3:first-of-type {
-    margin-top: 0; /* ページ先頭のH3は上マージンなし */
-}
-
-.privacy-content p {
-    margin-bottom: 15px;
-    line-height: 1.7;
-}
-
-.privacy-content ul {
-    list-style: disc; /* 黒丸リスト */
-    padding-left: 25px;
-    margin-bottom: 20px;
-}
-
-.privacy-content ul li {
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-
-.last-updated {
-    text-align: right;
-    font-size: 0.9em;
-    color: var(--light-text-color);
-    margin-top: 50px;
+    /* ファンレターページ */
+    .fanletter-section-item {
+        min-width: unset; /* 最小幅を解除 */
+    }
 }
