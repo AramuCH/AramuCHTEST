@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アラムch | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><a href="index.html" class="site-title">アラムch</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="goods.html">Goods</a></li>
+                    <li><a href="fanletter.html">Fan Letter</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-page" class="section-padded">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <p class="section-description">
+                    ご意見、ご感想、お仕事のご依頼など、お気軽にお問い合わせください。
+                </p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" placeholder="お名前を入力してください" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" placeholder="メールアドレスを入力してください" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">件名</label>
+                        <input type="text" id="subject" placeholder="件名を入力してください">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">メッセージ</label>
+                        <textarea id="message" placeholder="メッセージを入力してください" rows="8" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">送信する</button>
+                </form>
+                <p class="note center">
+                    ※お返事にはお時間をいただく場合がございます。全てのお問い合わせに返信できるとは限りません。
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 アラムch. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
