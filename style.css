@@ -658,3 +658,40 @@ a:hover {
         height: 150px; /* スマホでの画像高さを調整 */
     }
 }
+
+/* --- プライバシーポリシーページ関連 (privacy.html用) --- */
+.privacy-content h3 {
+    text-align: left; /* 左寄せ */
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 40px; /* 各セクション間の間隔 */
+    margin-bottom: 20px;
+}
+
+.privacy-content h3:first-of-type {
+    margin-top: 0; /* ページ先頭のH3は上マージンなし */
+}
+
+.privacy-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.privacy-content ul {
+    list-style: disc; /* 黒丸リスト */
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.privacy-content ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.last-updated {
+    text-align: right;
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-top: 50px;
+}
