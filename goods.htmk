@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アラムch | Official Goods</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1><a href="index.html" class="site-title">アラムch</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="goods.html">Goods</a></li>
+                    <li><a href="fanletter.html">Fan Letter</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="goods-page" class="section-padded">
+            <div class="container">
+                <h2>オフィシャルグッズ</h2>
+                <p class="section-description">アラムchのオリジナルグッズはこちら！</p>
+
+                <div class="goods-grid">
+                    <div class="goods-item">
+                        <img src="images/goods1.jpg" alt="アラムch Tシャツ" class="goods-image">
+                        <h3>アラムch オリジナルTシャツ</h3>
+                        <p class="goods-price">¥3,500（税込）</p>
+                        <p class="goods-description">
+                            アラムchのロゴとマスコットキャラクターがデザインされた、
+                            普段使いしやすいシンプルなTシャツです。
+                        </p>
+                        <a href="https://your-shop-link.com/tshirt" target="_blank" class="btn-primary">詳細・購入はこちら</a>
+                    </div>
+
+                    <div class="goods-item">
+                        <img src="images/goods2.jpg" alt="アラムch マグカップ" class="goods-image">
+                        <h3>アラムch マグカップ</h3>
+                        <p class="goods-price">¥1,800（税込）</p>
+                        <p class="goods-description">
+                            配信のお供にぴったり！パステルブルーのかわいいマグカップで、
+                            いつでもアラムchと一緒に。
+                        </p>
+                        <a href="https://your-shop-link.com/mugcup" target="_blank" class="btn-primary">詳細・購入はこちら</a>
+                    </div>
+
+                    <div class="goods-item">
+                        <img src="images/goods3.jpg" alt="アラムch キーホルダー" class="goods-image">
+                        <h3>アラムch アクリルキーホルダー</h3>
+                        <p class="goods-price">¥900（税込）</p>
+                        <p class="goods-description">
+                            カバンや鍵につけて、いつでもアラムchを持ち歩こう！
+                            描き下ろしイラストデザイン。
+                        </p>
+                        <a href="https://your-shop-link.com/keyholder" target="_blank" class="btn-primary">詳細・購入はこちら</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 アラムch. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
