@@ -20,9 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // オプション: スクロールで要素がフェードインするアニメーション
-    // Intersection Observer APIを使用
-    const fadinElements = document.querySelectorAll('section, .profile-icon, .media-item, .contact-form');
+    // スクロールで要素がフェードインするアニメーション (Intersection Observer APIを使用)
+    const fadinElements = document.querySelectorAll(
+        'section, .profile-icon, .media-item, .contact-form, ' +
+        '.about-image-large, .goods-item, .fanletter-section-item, ' +
+        '.about-brief-content, .more-section-item, .schedule-list li' // 新しく追加された要素やリストアイテムも対象に
+    );
 
     const observerOptions = {
         root: null, // ビューポートをルートとする
@@ -58,4 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
             this.reset(); // フォームをリセット
         });
     }
+
+    // 現在のページに対応するナビゲーションリンクをアクティブにする処理
+    const currentPath = window.location.pathname.split('/').pop(); // 例: "about.html"
+    const navLinks = document.querySelectorAll('.main-nav ul li a');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href').split('/').pop();
+        // 現在のHTMLファイル名がリンクのhrefと一致するか、またはトップページの場合
+        if (currentPath === linkPath || (currentPath === '' && linkPath === 'index.html')) {
+            link.classList.add('active-nav-link'); // アクティブクラスを追加
+        }
+    });
 });
